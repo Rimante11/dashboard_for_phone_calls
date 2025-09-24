@@ -1,0 +1,828 @@
+[
+  {
+    "date": "2025-03-16 00:00",
+    "employees": [
+      {
+        "name": "Lisa",
+        "calls": 14
+      },
+      {
+        "name": "Amir",
+        "calls": 11
+      }
+    ]
+  },
+  {
+    "date": "2025-03-17 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 13
+      },
+      {
+        "name": "Anders",
+        "calls": 9
+      }
+    ]
+  },
+  {
+    "date": "2025-03-18 00:00",
+    "employees": [
+      {
+        "name": "Lisa",
+        "calls": 7
+      },
+      {
+        "name": "Amir",
+        "calls": 13
+      }
+    ]
+  },
+  {
+    "date": "2025-03-19 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 12
+      },
+      {
+        "name": "Anders",
+        "calls": 10
+      },
+      {
+        "name": "Amir",
+        "calls": 8
+      }
+    ]
+  },
+  {
+    "date": "2025-03-20 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 10
+      },
+      {
+        "name": "Lisa",
+        "calls": 5
+      }
+    ]
+  },
+  {
+    "date": "2025-03-21 00:00",
+    "employees": [
+      {
+        "name": "Amir",
+        "calls": 18
+      },
+      {
+        "name": "Anders",
+        "calls": 7
+      }
+    ]
+  },
+  {
+    "date": "2025-03-22 00:00",
+    "employees": [
+      {
+        "name": "Lisa",
+        "calls": 16
+      },
+      {
+        "name": "Frida",
+        "calls": 11
+      }
+    ]
+  },
+  {
+    "date": "2025-03-23 00:00",
+    "employees": [
+      {
+        "name": "Anders",
+        "calls": 10
+      },
+      {
+        "name": "Amir",
+        "calls": 9
+      }
+    ]
+  },
+  {
+    "date": "2025-03-24 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 14
+      },
+      {
+        "name": "Lisa",
+        "calls": 12
+      }
+    ]
+  },
+  {
+    "date": "2025-03-25 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 10
+      },
+      {
+        "name": "Amir",
+        "calls": 15
+      }
+    ]
+  },
+  {
+    "date": "2025-03-26 00:00",
+    "employees": [
+      {
+        "name": "Lisa",
+        "calls": 13
+      },
+      {
+        "name": "Anders",
+        "calls": 8
+      }
+    ]
+  },
+  {
+    "date": "2025-03-27 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 9
+      },
+      {
+        "name": "Amir",
+        "calls": 12
+      }
+    ]
+  },
+  {
+    "date": "2025-03-28 00:00",
+    "employees": [
+      {
+        "name": "Lisa",
+        "calls": 15
+      },
+      {
+        "name": "Anders",
+        "calls": 10
+      }
+    ]
+  },
+  {
+    "date": "2025-03-29 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 11
+      },
+      {
+        "name": "Amir",
+        "calls": 14
+      }
+    ]
+  },
+  {
+    "date": "2025-03-30 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 10
+      },
+      {
+        "name": "Lisa",
+        "calls": 9
+      }
+    ]
+  },
+  {
+    "date": "2025-03-31 00:00",
+    "employees": [
+      {
+        "name": "Anders",
+        "calls": 12
+      },
+      {
+        "name": "Amir",
+        "calls": 10
+      }
+    ]
+  },
+  {
+    "date": "2025-04-01 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 13
+      },
+      {
+        "name": "Lisa",
+        "calls": 11
+      }
+    ]
+  },
+  {
+    "date": "2025-04-02 00:00",
+    "employees": [
+      {
+        "name": "Anders",
+        "calls": 9
+      },
+      {
+        "name": "Amir",
+        "calls": 12
+      }
+    ]
+  },
+  {
+    "date": "2025-04-03 00:00",
+    "employees": [
+      {
+        "name": "Lisa",
+        "calls": 14
+      },
+      {
+        "name": "Frida",
+        "calls": 10
+      }
+    ]
+  },
+  {
+    "date": "2025-04-04 00:00",
+    "employees": [
+      {
+        "name": "Anders",
+        "calls": 11
+      },
+      {
+        "name": "Amir",
+        "calls": 13
+      }
+    ]
+  },
+  {
+    "date": "2025-04-05 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 12
+      },
+      {
+        "name": "Lisa",
+        "calls": 8
+      }
+    ]
+  },
+  {
+    "date": "2025-04-06 00:00",
+    "employees": [
+      {
+        "name": "Anders",
+        "calls": 10
+      },
+      {
+        "name": "Amir",
+        "calls": 14
+      }
+    ]
+  },
+  {
+    "date": "2025-04-07 00:00",
+    "employees": [
+      {
+        "name": "Lisa",
+        "calls": 13
+      },
+      {
+        "name": "Frida",
+        "calls": 11
+      }
+    ]
+  },
+  {
+    "date": "2025-04-08 00:00",
+    "employees": [
+      {
+        "name": "Anders",
+        "calls": 9
+      },
+      {
+        "name": "Amir",
+        "calls": 10
+      }
+    ]
+  },
+  {
+    "date": "2025-04-09 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 14
+      },
+      {
+        "name": "Lisa",
+        "calls": 10
+      }
+    ]
+  },
+  {
+    "date": "2025-04-10 00:00",
+    "employees": [
+      {
+        "name": "Amir",
+        "calls": 12
+      },
+      {
+        "name": "Anders",
+        "calls": 11
+      }
+    ]
+  },
+  {
+    "date": "2025-04-11 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 13
+      },
+      {
+        "name": "Lisa",
+        "calls": 9
+      }
+    ]
+  },
+  {
+    "date": "2025-04-12 00:00",
+    "employees": [
+      {
+        "name": "Anders",
+        "calls": 12
+      },
+      {
+        "name": "Amir",
+        "calls": 10
+      }
+    ]
+  },
+  {
+    "date": "2025-04-13 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 11
+      },
+      {
+        "name": "Lisa",
+        "calls": 13
+      }
+    ]
+  },
+  {
+    "date": "2025-04-14 00:00",
+    "employees": [
+      {
+        "name": "Anders",
+        "calls": 9
+      },
+      {
+        "name": "Amir",
+        "calls": 15
+      }
+    ]
+  },
+  {
+    "date": "2025-04-15 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 14
+      },
+      {
+        "name": "Lisa",
+        "calls": 10
+      }
+    ]
+  },
+  {
+    "date": "2025-04-16 00:00",
+    "employees": [
+      {
+        "name": "Anders",
+        "calls": 10
+      },
+      {
+        "name": "Amir",
+        "calls": 11
+      }
+    ]
+  },
+  {
+    "date": "2025-04-17 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 12
+      },
+      {
+        "name": "Lisa",
+        "calls": 14
+      }
+    ]
+  },
+  {
+    "date": "2025-04-18 00:00",
+    "employees": [
+      {
+        "name": "Anders",
+        "calls": 8
+      },
+      {
+        "name": "Amir",
+        "calls": 13
+      }
+    ]
+  },
+  {
+    "date": "2025-04-19 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 13
+      },
+      {
+        "name": "Lisa",
+        "calls": 9
+      }
+    ]
+  },
+  {
+    "date": "2025-04-20 00:00",
+    "employees": [
+      {
+        "name": "Anders",
+        "calls": 11
+      },
+      {
+        "name": "Amir",
+        "calls": 14
+      }
+    ]
+  },
+  {
+    "date": "2025-04-21 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 10
+      },
+      {
+        "name": "Lisa",
+        "calls": 13
+      }
+    ]
+  },
+  {
+    "date": "2025-04-22 00:00",
+    "employees": [
+      {
+        "name": "Anders",
+        "calls": 9
+      },
+      {
+        "name": "Amir",
+        "calls": 10
+      }
+    ]
+  },
+  {
+    "date": "2025-04-23 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 15
+      },
+      {
+        "name": "Lisa",
+        "calls": 11
+      }
+    ]
+  },
+  {
+    "date": "2025-04-24 00:00",
+    "employees": [
+      {
+        "name": "Anders",
+        "calls": 8
+      },
+      {
+        "name": "Amir",
+        "calls": 12
+      }
+    ]
+  },
+  {
+    "date": "2025-04-25 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 13
+      },
+      {
+        "name": "Lisa",
+        "calls": 10
+      }
+    ]
+  },
+  {
+    "date": "2025-04-26 00:00",
+    "employees": [
+      {
+        "name": "Anders",
+        "calls": 10
+      },
+      {
+        "name": "Amir",
+        "calls": 11
+      }
+    ]
+  },
+  {
+    "date": "2025-04-27 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 12
+      },
+      {
+        "name": "Lisa",
+        "calls": 13
+      }
+    ]
+  },
+  {
+    "date": "2025-04-28 00:00",
+    "employees": [
+      {
+        "name": "Anders",
+        "calls": 9
+      },
+      {
+        "name": "Amir",
+        "calls": 13
+      }
+    ]
+  },
+  {
+    "date": "2025-04-29 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 14
+      },
+      {
+        "name": "Lisa",
+        "calls": 8
+      }
+    ]
+  },
+  {
+    "date": "2025-04-30 00:00",
+    "employees": [
+      {
+        "name": "Anders",
+        "calls": 11
+      },
+      {
+        "name": "Amir",
+        "calls": 10
+      }
+    ]
+  },
+  {
+    "date": "2025-05-01 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 12
+      },
+      {
+        "name": "Lisa",
+        "calls": 10
+      }
+    ]
+  },
+  {
+    "date": "2025-05-02 00:00",
+    "employees": [
+      {
+        "name": "Amir",
+        "calls": 13
+      },
+      {
+        "name": "Anders",
+        "calls": 9
+      }
+    ]
+  },
+  {
+    "date": "2025-05-03 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 10
+      },
+      {
+        "name": "Lisa",
+        "calls": 12
+      }
+    ]
+  },
+  {
+    "date": "2025-05-04 00:00",
+    "employees": [
+      {
+        "name": "Anders",
+        "calls": 11
+      },
+      {
+        "name": "Amir",
+        "calls": 14
+      }
+    ]
+  },
+  {
+    "date": "2025-05-05 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 10
+      },
+      {
+        "name": "Lisa",
+        "calls": 22
+      },
+      {
+        "name": "Anders",
+        "calls": 8
+      }
+    ]
+  },
+  {
+    "date": "2025-05-06 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 9
+      },
+      {
+        "name": "Lisa",
+        "calls": 6
+      },
+      {
+        "name": "Anders",
+        "calls": 12
+      }
+    ]
+  },
+  {
+    "date": "2025-05-07 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 17
+      },
+      {
+        "name": "Anders",
+        "calls": 12
+      }
+    ]
+  },
+  {
+    "date": "2025-05-08 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 10
+      },
+      {
+        "name": "Anders",
+        "calls": 8
+      },
+      {
+        "name": "Amir",
+        "calls": 14
+      }
+    ]
+  },
+  {
+    "date": "2025-05-09 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 25
+      },
+      {
+        "name": "Amir",
+        "calls": 21
+      }
+    ]
+  },
+  {
+    "date": "2025-05-10 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 14
+      },
+      {
+        "name": "Lisa",
+        "calls": 19
+      }
+    ]
+  },
+  {
+    "date": "2025-05-11 00:00",
+    "employees": [
+      {
+        "name": "Anders",
+        "calls": 13
+      },
+      {
+        "name": "Amir",
+        "calls": 11
+      }
+    ]
+  },
+  {
+    "date": "2025-05-12 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 16
+      },
+      {
+        "name": "Lisa",
+        "calls": 20
+      }
+    ]
+  },
+  {
+    "date": "2025-05-13 00:00",
+    "employees": [
+      {
+        "name": "Anders",
+        "calls": 9
+      },
+      {
+        "name": "Amir",
+        "calls": 12
+      }
+    ]
+  },
+  {
+    "date": "2025-05-14 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 13
+      },
+      {
+        "name": "Lisa",
+        "calls": 15
+      },
+      {
+        "name": "Amir",
+        "calls": 10
+      }
+    ]
+  },
+  {
+    "date": "2025-05-15 00:00",
+    "employees": [
+      {
+        "name": "Lisa",
+        "calls": 18
+      },
+      {
+        "name": "Anders",
+        "calls": 10
+      }
+    ]
+  },
+  {
+    "date": "2025-05-16 00:00",
+    "employees": [
+      {
+        "name": "Frida",
+        "calls": 21
+      },
+      {
+        "name": "Amir",
+        "calls": 17
+      }
+    ]
+  }
+]

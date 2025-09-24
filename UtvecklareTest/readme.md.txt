@@ -1,0 +1,2 @@
+Skapa en dashboard som visar antal telefonsamtal per kundtjänstmedarbetare i index.cshtml.
+Populera data från den färdiga list-modellen Call. Du har fria händer att bestämma vilka ramverk du vill använda och hur du vill visualisera i grafer och tabeller.
