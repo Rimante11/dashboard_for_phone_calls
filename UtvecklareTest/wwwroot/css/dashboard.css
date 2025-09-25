@@ -143,6 +143,55 @@
     opacity: 0.8;
 }
 
+/* Dashboard Icon Circles */
+.dashboard-icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-icon-circle.dashboard-icon-primary {
+    background-color: rgba(13, 110, 253, 0.2);
+}
+
+.dashboard-icon-circle.dashboard-icon-success {
+    background-color: rgba(25, 135, 84, 0.2);
+}
+
+.dashboard-icon-circle.dashboard-icon-info {
+    background-color: rgba(13, 202, 240, 0.2);
+}
+
+/* Dashboard Icon Colors */
+.dashboard-icon-primary {
+    color: #0d6efd !important;
+    font-size: 1.5rem;
+}
+
+.dashboard-icon-success {
+    color: #198754 !important;
+    font-size: 1.5rem;
+}
+
+.dashboard-icon-info {
+    color: #0dcaf0 !important;
+    font-size: 1.5rem;
+}
+
+/* Dashboard Text Styling */
+.dashboard-value {
+    color: #2c3e50;
+    font-size: 1.8rem;
+}
+
+.dashboard-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
 /* General Card Styling */
 .card {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
