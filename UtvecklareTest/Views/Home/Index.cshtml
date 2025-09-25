@@ -33,7 +33,6 @@
         </div>
     </div>
 
-    <!-- Dashboard Cards - Combined -->
     <div class="row mb-4">
         <div class="col-12">
             <div class="card dashboard-card bg-white text-dark shadow">
@@ -64,25 +63,29 @@
         @Html.Partial("_EmployeeTable", Model.EmployeeStats)
     </div>
 
-    <!-- Diagram sektion -->
     <div class="row">
         @Html.Partial("_EmployeeChart")
         @Html.Partial("_MonthlyChart")
     </div>
 
-    <!-- Trendanalys -->
     <div class="row">
         @Html.Partial("_TrendChart")
     </div>
 </div>
 
-<!-- Chart.js och Font Awesome -->
+<!-- Chart.js och Font Awesome Libraries-->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 
+<!-- Dashboard Data -->
 <script>
-    // Data för JavaScript
     const employees = @Html.Raw(Json.Serialize(Model.Employees));
     const employeeStats = @Html.Raw(Json.Serialize(Model.EmployeeStats));
     const dates = @Html.Raw(Json.Serialize(Model.Dates));
 </script>
+
+<!-- JavaScript Files -->
+<script src="~/js/employeeChart.js"></script>
+<script src="~/js/monthlyChart.js"></script>
+<script src="~/js/trendChart.js"></script>
+<script src="~/js/dashboard.js"></script>

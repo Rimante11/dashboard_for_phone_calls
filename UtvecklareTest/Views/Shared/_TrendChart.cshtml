@@ -1,4 +1,4 @@
-<!-- Detailed Trend Analysis Component -->
+<!-- Detailed trend analysis component -->
 <div class="col-12">
     <div class="card chart-card-modern dashboard-card bg-white text-dark shadow">
         <div class="card-header chart-header border-0 bg-transparent">
@@ -19,67 +19,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const trendCtx = document.getElementById('trendChart')?.getContext('2d');
-        if (trendCtx && typeof employees !== 'undefined' && typeof employeeStats !== 'undefined' && typeof dates !== 'undefined') {
-            
-            new Chart(trendCtx, {
-                type: 'bar',
-                data: {
-                    labels: dates,
-                    datasets: employees.map((employee, index) => {
-                        const employeeData = employeeStats.find(e => e.name === employee);
-                        const colors = [
-                            'rgba(255, 99, 132, 0.7)',
-                            'rgba(54, 162, 235, 0.7)', 
-                            'rgba(255, 205, 86, 0.7)',
-                            'rgba(75, 192, 192, 0.7)',
-                            'rgba(153, 102, 255, 0.7)',
-                            'rgba(255, 159, 64, 0.7)'
-                        ];
-                        
-                        return {
-                            label: employee,
-                            data: dates.map(date => {
-                                const dayData = employeeData.dailyCalls.find(d => d.date === date);
-                                return dayData ? dayData.calls : 0;
-                            }),
-                            backgroundColor: colors[index % colors.length],
-                            borderColor: colors[index % colors.length].replace('0.7', '1'),
-                            borderWidth: 1
-                        };
-                    })
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        title: {
-                            display: true,
-                            text: 'Daglig Fördelning per Anställd'
-                        }
-                    },
-                    scales: {
-                        x: {
-                            stacked: false,
-                            title: {
-                                display: true,
-                                text: 'Datum'
-                            }
-                        },
-                        y: {
-                            stacked: false,
-                            beginAtZero: true,
-                            title: {
-                                display: true,
-                                text: 'Antal Samtal'
-                            }
-                        }
-                    }
-                }
-            });
-        }
-    });
-</script>

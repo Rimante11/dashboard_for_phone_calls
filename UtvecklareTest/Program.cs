@@ -4,6 +4,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages(); 
 builder.Services.AddControllersWithViews();
 builder.Services.AddMvc().AddRazorRuntimeCompilation();
+
+// Register custom services
+builder.Services.AddScoped<UtvecklareTest.Services.Interfaces.ICallService, UtvecklareTest.Services.CallService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
