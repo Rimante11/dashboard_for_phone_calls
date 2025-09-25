@@ -3,16 +3,102 @@
 
 @{
     List<Call> calls = Model;
+    
+    // Sammanställ data för visualisering
+    var employeeStats = calls
+        .SelectMany(c => c.Employees.Select(e => new { Date = c.date, Employee = e.Name, Calls = e.Calls }))
+        .GroupBy(x => x.Employee)
+        .Select(g => new {
+            Name = g.Key,
+            TotalCalls = g.Sum(x => x.Calls),
+            DailyCalls = g.OrderBy(x => x.Date).Select(x => new { Date = x.Date.ToString("yyyy-MM-dd"), Calls = x.Calls }).ToList()
+        }).ToList();
+
+
+    var dates = calls.Select(c => c.date.ToString("yyyy-MM-dd")).Distinct().OrderBy(d => d).ToList();
+    var employees = employeeStats.Select(e => e.Name).ToList();
+    
+    // Dashboard kort data
+    var dashboardCards = new List<dynamic> {
+        new { 
+            Value = calls.SelectMany(c => c.Employees).Sum(e => e.Calls), 
+            Title = "Totala Samtal", 
+            Icon = "fas fa-phone", 
+            BackgroundClass = "bg-primary"
+        },
+        new { 
+            Value = employees.Count, 
+            Title = "Aktiva Anställda", 
+            Icon = "fas fa-users", 
+            BackgroundClass = "bg-success"
+        },
+        new { 
+            Value = dates.Count, 
+            Title = "Rapporterade Dagar", 
+            Icon = "fas fa-calendar-check", 
+            BackgroundClass = "bg-info"
+        }
+    };
 }
 
-<div class="text-center">
-    <h1 class="display-4">Uppgift</h1>
-    <br />
-    <p>
-        Sofia vill ha en överblick över hur många telefonsamtal som varje kundtjänstmedarbetare har svarat.<br />
-        Skapa en dashboard som visar antal telefonsamtal per kundtjänstmedarbetare, per dag här nedan.
-        Du ska populera data från den färdiga list-modellen <code>Call</code>. Du har fria händer att bestämma vilka ramverk du vill använda och hur du vill visualisera i grafer och tabeller.
-    </p>
-    <div>
+<div class="container-fluid dashboard-container">
+    <div class="row mb-4">
+        <div class="col-12 text-center">
+            <h1 class="dashboard-title display-4 mb-3">Dashboard för Telefonsamtal</h1>
+            <p class="dashboard-subtitle lead">Överblick över telefonsamtal per kundtjänstmedarbetare och dag</p>
+        </div>
+    </div>
+
+    <!-- Dashboard Cards - Combined -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card dashboard-card bg-white text-dark shadow">
+                <div class="card-body">
+                    <div class="row text-center">
+                        @foreach (var card in dashboardCards)
+                        {
+                            <div class="col-md-4 mb-3 mb-md-0">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <div class="rounded-circle me-3" style="background-color: @(card.BackgroundClass == "bg-primary" ? "#0d6efd" : card.BackgroundClass == "bg-success" ? "#198754" : "#0dcaf0")20; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                                        <i class="@card.Icon" style="color: @(card.BackgroundClass == "bg-primary" ? "#0d6efd" : card.BackgroundClass == "bg-success" ? "#198754" : "#0dcaf0"); font-size: 1.5rem;"></i>
+                                    </div>
+                                    <div class="text-start">
+                                        <h3 class="mb-1 fw-bold" style="color: #2c3e50; font-size: 1.8rem;">@card.Value</h3>
+                                        <p class="text-muted mb-0" style="font-size: 0.9rem; font-weight: 500;">@card.Title</p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        @Html.Partial("_CallsTable", Model)
+        @Html.Partial("_EmployeeTable", employeeStats)
+    </div>
+
+    <!-- Diagram sektion -->
+    <div class="row">
+        @Html.Partial("_EmployeeChart")
+        @Html.Partial("_MonthlyChart")
+    </div>
+
+    <!-- Trendanalys -->
+    <div class="row">
+        @Html.Partial("_TrendChart")
     </div>
 </div>
+
+<!-- Chart.js och Font Awesome -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+
+<script>
+    // Data för JavaScript
+    const employees = @Html.Raw(Json.Serialize(employees));
+    const employeeStats = @Html.Raw(Json.Serialize(employeeStats));
+    const dates = @Html.Raw(Json.Serialize(dates));
+</script>

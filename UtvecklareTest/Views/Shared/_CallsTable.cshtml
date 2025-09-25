@@ -1,0 +1,52 @@
+@using UtvecklareTest.Models
+@model List<Call>
+<!-- Detailed Call Data Table Component -->
+<div class="col-md-6 mb-4">
+    <div class="card chart-card-modern dashboard-card bg-white text-dark shadow">
+        <div class="card-header chart-header border-0 bg-transparent">
+            <div class="d-flex align-items-center">
+                <div>
+                    <h5 class="chart-title">Detaljerad Samtalsdata</h5>
+                    <p class="chart-subtitle">Dagliga samtalsrapporter</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-body chart-body table-card-body">
+            <div class="table-responsive">
+                <table class="table table-borderless mb-0">
+                    <thead class="sticky-header">
+                        <tr class="calls-table-header-row">
+                            <th class="calls-table-header">Namn</th>
+                            <th class="calls-table-header">Datum</th>
+                            <th class="calls-table-header-right">Samtal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var call in Model.OrderBy(c => c.date))
+                        {
+                            foreach (var employee in call.Employees.OrderBy(e => e.Name))
+                            {
+                                <tr class="calls-table-row">
+                                    <td class="calls-table-cell">
+                                        <div class="d-flex align-items-center">
+                                            <div class="rounded-circle me-2 calls-avatar">
+                                                @(!string.IsNullOrEmpty(employee.Name) ? employee.Name.Substring(0, 1) : "N/A")
+                                            </div>
+                                            <span class="calls-employee-name">@employee.Name</span>
+                                        </div>
+                                    </td>
+                                    <td class="calls-table-cell">
+                                        <span class="calls-date-text">@call.date.ToString("yyyy-MM-dd")</span>
+                                    </td>
+                                    <td class="calls-table-cell-right">
+                                        <span class="badge calls-badge">@employee.Calls</span>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
