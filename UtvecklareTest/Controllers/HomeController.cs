@@ -16,7 +16,31 @@ namespace UtvecklareTest.Controllers
         public IActionResult Index()
         {
             List<Call> calls = GetData();
-            return View(calls);
+
+            var employeeStats = calls
+                .SelectMany(c => c.Employees.Select(e => new { Date = c.date, Employee = e.Name, Calls = e.Calls }))
+                .GroupBy(x => x.Employee)
+                .Select(g => new EmployeeStats
+                {
+                    Name = g.Key,
+                    TotalCalls = g.Sum(x => x.Calls),
+                    DailyCalls = g.OrderBy(x => x.Date)
+                                  .Select(x => new DailyCall { Date = x.Date.ToString("yyyy-MM-dd"), Calls = x.Calls })
+                                  .ToList()
+                }).ToList();
+
+            var dates = calls.Select(c => c.date.ToString("yyyy-MM-dd")).Distinct().OrderBy(d => d).ToList();
+            var employees = employeeStats.Select(e => e.Name).ToList();
+
+            var model = new DashboardViewModel
+            {
+                Calls = calls,
+                EmployeeStats = employeeStats,
+                Employees = employees,
+                Dates = dates
+            };
+
+            return View(model);
         }
 
         List<Call> GetData()

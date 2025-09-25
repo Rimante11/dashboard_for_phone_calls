@@ -1,39 +1,23 @@
 ﻿@using UtvecklareTest.Models
-@model List<Call>
+@model DashboardViewModel
 
 @{
-    List<Call> calls = Model;
-    
-    // Sammanställ data för visualisering
-    var employeeStats = calls
-        .SelectMany(c => c.Employees.Select(e => new { Date = c.date, Employee = e.Name, Calls = e.Calls }))
-        .GroupBy(x => x.Employee)
-        .Select(g => new {
-            Name = g.Key,
-            TotalCalls = g.Sum(x => x.Calls),
-            DailyCalls = g.OrderBy(x => x.Date).Select(x => new { Date = x.Date.ToString("yyyy-MM-dd"), Calls = x.Calls }).ToList()
-        }).ToList();
-
-
-    var dates = calls.Select(c => c.date.ToString("yyyy-MM-dd")).Distinct().OrderBy(d => d).ToList();
-    var employees = employeeStats.Select(e => e.Name).ToList();
-    
     // Dashboard kort data
     var dashboardCards = new List<dynamic> {
         new { 
-            Value = calls.SelectMany(c => c.Employees).Sum(e => e.Calls), 
+            Value = Model.Calls.SelectMany(c => c.Employees).Sum(e => e.Calls), 
             Title = "Totala Samtal", 
             Icon = "fas fa-phone", 
             BackgroundClass = "bg-primary"
         },
         new { 
-            Value = employees.Count, 
+            Value = Model.Employees.Count, 
             Title = "Aktiva Anställda", 
             Icon = "fas fa-users", 
             BackgroundClass = "bg-success"
         },
         new { 
-            Value = dates.Count, 
+            Value = Model.Dates.Count, 
             Title = "Rapporterade Dagar", 
             Icon = "fas fa-calendar-check", 
             BackgroundClass = "bg-info"
@@ -76,8 +60,8 @@
     </div>
 
     <div class="row">
-        @Html.Partial("_CallsTable", Model)
-        @Html.Partial("_EmployeeTable", employeeStats)
+        @Html.Partial("_CallsTable", Model.Calls)
+        @Html.Partial("_EmployeeTable", Model.EmployeeStats)
     </div>
 
     <!-- Diagram sektion -->
@@ -98,7 +82,7 @@
 
 <script>
     // Data för JavaScript
-    const employees = @Html.Raw(Json.Serialize(employees));
-    const employeeStats = @Html.Raw(Json.Serialize(employeeStats));
-    const dates = @Html.Raw(Json.Serialize(dates));
+    const employees = @Html.Raw(Json.Serialize(Model.Employees));
+    const employeeStats = @Html.Raw(Json.Serialize(Model.EmployeeStats));
+    const dates = @Html.Raw(Json.Serialize(Model.Dates));
 </script>
