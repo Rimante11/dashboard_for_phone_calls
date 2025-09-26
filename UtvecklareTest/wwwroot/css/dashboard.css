@@ -1,4 +1,4 @@
-/* Dashboard-specific styles */
+/* Dashboard specific styles */
 .dashboard-container {
     padding: 20px 0;
 }
@@ -27,7 +27,7 @@
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Combined Dashboard Card Styles */
+/* Combined dashboard card styles */
 .dashboard-card.bg-white {
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     border: 1px solid #e9ecef;
@@ -51,7 +51,7 @@
     font-weight: 500;
 }
 
-/* Modern Chart Card Styles */
+/* Modern chart card styles */
 .chart-card-modern {
     background: white;
     border: none;
@@ -143,7 +143,7 @@
     opacity: 0.8;
 }
 
-/* Dashboard Icon Circles */
+/* Dashboard icon circles */
 .dashboard-icon-circle {
     width: 60px;
     height: 60px;
@@ -165,7 +165,11 @@
     background-color: rgba(13, 202, 240, 0.2);
 }
 
-/* Dashboard Icon Colors */
+.dashboard-icon-circle.dashboard-icon-secondary {
+    background-color: rgba(108, 117, 125, 0.2);
+}
+
+/* Dashboard icon colors */
 .dashboard-icon-primary {
     color: #0d6efd !important;
     font-size: 1.5rem;
@@ -181,7 +185,12 @@
     font-size: 1.5rem;
 }
 
-/* Dashboard Text Styling */
+.dashboard-icon-secondary {
+    color: #6c757d !important;
+    font-size: 1.5rem;
+}
+
+/* Dashboard text styling */
 .dashboard-value {
     color: #2c3e50;
     font-size: 1.8rem;
@@ -192,7 +201,7 @@
     font-weight: 500;
 }
 
-/* General Card Styling */
+/* General card styling */
 .card {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: none;
@@ -214,7 +223,7 @@ canvas {
     max-height: 400px;
 }
 
-/* Progress Bars */
+/* Progress bars */
 .progress {
     background-color: #e9ecef;
     height: 20px;
@@ -224,7 +233,7 @@ canvas {
     background: linear-gradient(45deg, #007bff, #0056b3);
 }
 
-/* Table Styling */
+/* Table styling */
 .table-responsive {
     border: 1px solid #dee2e6;
     border-radius: 0.375rem;
@@ -240,7 +249,7 @@ canvas {
     font-size: 0.9em;
 }
 
-/* Sticky Header */
+/* Sticky header */
 .sticky-header,
 .sticky-top {
     position: sticky;
@@ -249,7 +258,7 @@ canvas {
     background-color: #fff;
 }
 
-/* Custom Scrollbar */
+/* Custom scrollbar */
 .table-responsive::-webkit-scrollbar {
     width: 8px;
 }
@@ -268,7 +277,7 @@ canvas {
     background: #555;
 }
 
-/* Common Table Styling */
+/* Common table styling */
 .employee-table-row,
 .calls-table-row {
     border-bottom: 1px solid #f8f9fa;
@@ -346,7 +355,18 @@ canvas {
     border-bottom: 2px solid #f8f9fa;
 }
 
-/* Calls Table Specific Styling */
+/* Table card body styling - consistent heights */
+.table-card-body {
+    min-height: 440px;
+    overflow-y: auto;
+}
+
+.table-card-body-small {
+    min-height: 300px;
+    overflow-y: auto;
+}
+
+/* Calls table specific styling */
 .calls-table-cell-right {
     padding: 1rem 0.5rem;
     vertical-align: middle;
@@ -396,15 +416,4 @@ canvas {
     letter-spacing: 0.5px;
     border: none;
     text-align: right;
-}
-
-/* Table Card Body Styling - Consistent Heights */
-.table-card-body {
-    min-height: 440px;
-    overflow-y: auto;
-}
-
-.table-card-body-small {
-    min-height: 300px;
-    overflow-y: auto;
 }

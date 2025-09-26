@@ -1,30 +1,6 @@
 ﻿@using UtvecklareTest.Models
 @model DashboardViewModel
 
-@{
-    // Dashboard kort data
-    var dashboardCards = new List<dynamic> {
-        new { 
-            Value = Model.Calls.SelectMany(c => c.Employees).Sum(e => e.Calls), 
-            Title = "Totala Samtal", 
-            Icon = "fas fa-phone", 
-            BackgroundClass = "bg-primary"
-        },
-        new { 
-            Value = Model.Employees.Count, 
-            Title = "Aktiva Anställda", 
-            Icon = "fas fa-users", 
-            BackgroundClass = "bg-success"
-        },
-        new { 
-            Value = Model.Dates.Count, 
-            Title = "Rapporterade Dagar", 
-            Icon = "fas fa-calendar-check", 
-            BackgroundClass = "bg-info"
-        }
-    };
-}
-
 <div class="container-fluid dashboard-container">
     <div class="row mb-4">
         <div class="col-12 text-center">
@@ -38,8 +14,7 @@
             <div class="card dashboard-card bg-white text-dark shadow">
                 <div class="card-body">
                     <div class="row text-center">
-                        @foreach (var card in dashboardCards)
-                        {
+                        @foreach (var card in Model.DashboardCards){
                             <div class="col-md-4 mb-3 mb-md-0">
                                 <div class="d-flex align-items-center justify-content-center">
                                     <div class="dashboard-icon-circle dashboard-icon-@(card.BackgroundClass.Replace("bg-", "")) me-3">
@@ -73,18 +48,18 @@
     </div>
 </div>
 
-<!-- Chart.js och Font Awesome Libraries-->
+<!-- Chart.js och font awesome libraries-->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 
-<!-- Dashboard Data -->
+<!-- Dashboard data -->
 <script>
     const employees = @Html.Raw(Json.Serialize(Model.Employees));
     const employeeStats = @Html.Raw(Json.Serialize(Model.EmployeeStats));
     const dates = @Html.Raw(Json.Serialize(Model.Dates));
 </script>
 
-<!-- JavaScript Files -->
+<!-- JavaScript files -->
 <script src="~/js/employeeChart.js"></script>
 <script src="~/js/monthlyChart.js"></script>
 <script src="~/js/trendChart.js"></script>
